@@ -51,10 +51,10 @@ const TaskList = () => {
           <TaskItem
             key={task.id}
             id={task.id}
-            nota={task.texto}
+            task={task.texto}
             completada={task.completada}
-            eliminarNota={eliminarTask}
-            completarNota={completarTask}
+            eliminarTask={eliminarTask}
+            completarTask={completarTask}
           />
         ))}
       </div>

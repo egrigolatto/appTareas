@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { IconoBorrar } from "./IconoBorrar";
 
-const TaskItem = ({ id, nota, completada, completarNota, eliminarNota }) => {
+const TaskItem = ({ id, task, completada, completarTask, eliminarTask }) => {
   return (
     <div
       className={
@@ -12,11 +12,11 @@ const TaskItem = ({ id, nota, completada, completarNota, eliminarNota }) => {
     >
       <div
         className=" w-full h-full text-left "
-        onClick={() => completarNota(id)}
+        onClick={() => completarTask(id)}
       >
-        {nota}
+        {task}
       </div>
-      <div onClick={() => eliminarNota(id)} className="">
+      <div onClick={() => eliminarTask(id)} className="">
         <IconoBorrar />
       </div>
     </div>
@@ -25,10 +25,10 @@ const TaskItem = ({ id, nota, completada, completarNota, eliminarNota }) => {
 
 TaskItem.propTypes = {
   id: PropTypes.string,
-  nota: PropTypes.string,
+  task: PropTypes.string,
   completada: PropTypes.bool,
-  completarNota: PropTypes.func,
-  eliminarNota: PropTypes.func,
+  completarTask: PropTypes.func,
+  eliminarTask: PropTypes.func,
 };
 
 export { TaskItem };
